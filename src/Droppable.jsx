@@ -1,9 +1,9 @@
 import React from 'react';
 import {useDroppable} from '@dnd-kit/core';
 
-function Droppable(props) {
+export function Droppable(props) {
   const {isOver, setNodeRef} = useDroppable({
-    id: 'droppable',
+    id: props.id,
   });
   const style = {
     color: isOver ? 'green' : undefined,
@@ -16,5 +16,3 @@ function Droppable(props) {
     </div>
   );
 }
-
-export default  Droppable
